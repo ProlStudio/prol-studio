@@ -4,6 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PROL Studio — Sitios web para profesionales independientes</title>
+<!-- SEO -->
+<meta name="description" content="PROL Studio diseña sitios web simples y profesionales para psicólogos, abogados, arquitectos, coaches y consultores en Argentina. Entrega en 7 días." />
+<meta name="keywords" content="sitio web para psicólogos, página web para abogados, diseño web profesionales independientes, sitio web Argentina, diseño web Córdoba" />
+<meta name="author" content="PROL Studio" />
+<link rel="canonical" href="https://prol-studio.vercel.app/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="PROL Studio — Sitios web para profesionales independientes" />
+<meta property="og:description" content="Sitios simples, modernos y profesionales para psicólogos, abogados, arquitectos y más. Entrega en 7 días." />
+<meta property="og:url" content="https://prol-studio.vercel.app/" />
+<meta property="og:locale" content="es_AR" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="PROL Studio — Sitios web para profesionales" />
+<meta name="twitter:description" content="Sitios simples y profesionales para independientes en Argentina. Entrega en 7 días." />  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
@@ -866,7 +883,118 @@
       .form-wrap { padding: 28px 20px; }
       .contact-inner { gap: 28px; }
     }
+    .faq-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.faq-item summary {
+  padding: 20px 24px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary:hover { background: var(--surface-alt); }
+.faq-item p {
+  padding: 0 24px 20px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "name": "PROL Studio",
+      "description": "Diseño de sitios web simples y profesionales para psicólogos, abogados, arquitectos, dentistas, coaches y consultores independientes en Argentina.",
+      "url": "https://prol-studio.vercel.app/",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Argentina"
+      },
+      "serviceType": "Diseño web para profesionales independientes",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Plan Presencia",
+          "price": "120",
+          "priceCurrency": "USD",
+          "description": "Sitio de una página para profesionales independientes"
+        },
+        {
+          "@type": "Offer",
+          "name": "Plan Profesional",
+          "price": "220",
+          "priceCurrency": "USD",
+          "description": "Sitio multipágina con SEO básico y hosting incluido"
+        },
+        {
+          "@type": "Offer",
+          "name": "Plan Growth",
+          "price": "380",
+          "priceCurrency": "USD",
+          "description": "Sitio completo con blog, agenda online y analytics"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta un sitio web para profesionales en Argentina?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En PROL Studio los precios arrancan en USD 120 para un sitio de una página, USD 220 para un sitio multipágina profesional y USD 380 para un sitio completo con blog y agenda online."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tarda en estar listo mi sitio web?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El plazo de entrega es de 7 días hábiles desde que completás el formulario inicial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito saber de tecnología para tener mi sitio web?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. PROL Studio se encarga de todo el proceso técnico. Vos solo nos contás sobre tu trabajo y nosotros hacemos el resto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué profesionales pueden tener un sitio web con PROL Studio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trabajamos con psicólogos, abogados, arquitectos, dentistas, médicos, coaches, consultores, contadores y cualquier profesional independiente que quiera tener presencia online."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1267,6 +1395,38 @@
           ¡Listo! Recibimos tu consulta. Te respondemos en menos de 24 horas. 🙌
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background:var(--surface)">
+  <div class="container">
+    <div class="section-intro fade-up">
+      <div class="tag">Preguntas frecuentes</div>
+      <h2>Las dudas más comunes</h2>
+    </div>
+    <div style="max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:16px;">
+      <details class="faq-item fade-up">
+        <summary>¿Cuánto tarda en estar listo mi sitio?</summary>
+        <p>7 días hábiles desde que completás el formulario. En casos más complejos (Plan Growth) puede ser hasta 10 días.</p>
+      </details>
+      <details class="faq-item fade-up">
+        <summary>¿Necesito saber de tecnología?</summary>
+        <p>Para nada. Vos nos contás de tu trabajo, nosotros nos encargamos de todo lo técnico.</p>
+      </details>
+      <details class="faq-item fade-up">
+        <summary>¿Qué pasa si quiero hacer cambios después?</summary>
+        <p>Cada plan incluye rondas de revisión. Cambios posteriores a la entrega tienen un costo adicional según el alcance.</p>
+      </details>
+      <details class="faq-item fade-up">
+        <summary>¿Necesito comprar un dominio aparte?</summary>
+        <p>Depende del plan. El hosting está incluido en los planes Profesional y Growth. El dominio (.com.ar o .com) se consigue aparte y te ayudamos a configurarlo.</p>
+      </details>
+      <details class="faq-item fade-up">
+        <summary>¿Trabajan con cualquier profesional?</summary>
+        <p>Sí. Psicólogos, abogados, arquitectos, dentistas, médicos, coaches, consultores, contadores y cualquier profesional independiente.</p>
+      </details>
     </div>
   </div>
 </section>
